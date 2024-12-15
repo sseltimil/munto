@@ -1,5 +1,5 @@
 import './App.css'
-import Gifys from './components/GifList/GiftList';
+import GifyList from './components/GifList/GifyListComponent';
 import { useGifyContext } from './contexts/GifyContext/GifyContext';
 import styled from 'styled-components';
 
@@ -26,7 +26,7 @@ function App() {
           placeholder="Search for GIFs..."
         />
       </form>
-      <Gifys gifys={gifyState.gifs}></Gifys>
+      <GifyList gifys={gifyState.gifs}></GifyList>
     </>
   )
 }

@@ -1,5 +1,5 @@
 // the type for the Gify data
-export type Gify = {
+export type GifyType = {
   id: string;
   title: string;
   images: {
@@ -11,7 +11,7 @@ export type Gify = {
 
 // the state type
 export type GifyStateType = {
-  gifs: Gify[];
+  gifs: GifyType[];
   loading: boolean;
   error: string | null;
   searchQuery: string;
@@ -19,7 +19,7 @@ export type GifyStateType = {
 
 // the action type
 export type Action =
-  | { type: 'SET_GIFS'; payload: Gify[] }
+  | { type: 'SET_GIFS'; payload: GifyType[] }
   | { type: 'SET_ERROR'; payload: string }
   | { type: 'SET_IS_LOADING'; payload: boolean }
   | { type: 'SET_SEARCH_QUERY'; payload: string };
